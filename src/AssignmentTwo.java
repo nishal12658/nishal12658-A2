@@ -4,26 +4,23 @@ public class AssignmentTwo {
     }
 
     public void partThree() {
-        // Queue demo
+
     }
 
     public void partFourA() {
-        // LinkedList demo
+  
     }
 
     public void partFourB() {
-        // Sorting demo
+  
     }
 
     public void partFive() {
-        // Ride cycle demo
     }
 
     public void partSix() {
-        // Export to file
     }
 
     public void partSeven() {
-        // Import from file
     }
 }
