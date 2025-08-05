@@ -1,6 +1,7 @@
 public class AssignmentTwo {
     public static void main(String[] args) {
-        // You can call testing methods here later
+        AssignmentTwo a2 = new AssignmentTwo();
+        a2.partThree(); // Test Part 3 here
     }
 
     public void partThree() {
