@@ -38,18 +38,36 @@ public class Ride implements RideInterface {
 
     @Override
     public void addVisitorToQueue(Visitor visitor) {
-        // Implementation in Part 3
+        if (visitor != null) {
+            queue.offer(visitor); 
+            System.out.println("Visitor " + visitor.getName() + " added to the queue.");
+        } else {
+            System.out.println("Cannot add a null visitor to the queue.");
+        }
     }
 
     @Override
     public void removeVisitorFromQueue() {
-        // Implementation in Part 3
+        Visitor removed = queue.poll(); 
+        if (removed != null) {
+            System.out.println("Visitor " + removed.getName() + " removed from the queue.");
+        } else {
+            System.out.println("Queue is empty. No visitor to remove.");
+        }
     }
 
     @Override
     public void printQueue() {
-        // Implementation in Part 3
+        if (queue.isEmpty()) {
+            System.out.println("The queue is currently empty.");
+        } else {
+            System.out.println("Current visitors in the queue:");
+            for (Visitor v : queue) {
+                System.out.println("- " + v.getName() + " (Ticket: " + v.getTicketNumber() + ")");
+            }
+        }
     }
+
 
     @Override
     public void runOneCycle() {
