@@ -96,12 +96,23 @@ public class Ride implements RideInterface {
 
     @Override
     public int numberOfVisitors() {
-        // Implementation in Part 4A
-        return 0;
+        int count = rideHistory.size();
+        System.out.println("Total number of visitors in ride history: " + count);
+        return count;
     }
 
     @Override
     public void printRideHistory() {
-        // Implementation in Part 4A
+        if (rideHistory.isEmpty()) {
+            System.out.println("No visitors in ride history.");
+            return;
+        }
+
+        System.out.println("Visitors who took the ride:");
+        Iterator<Visitor> iterator = rideHistory.iterator();
+        while (iterator.hasNext()) {
+            Visitor v = iterator.next();
+            System.out.println("- " + v.getName() + " (Ticket: " + v.getTicketNumber() + ")");
+        }
     }
 }
