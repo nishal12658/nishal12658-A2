@@ -78,13 +78,20 @@ public class Ride implements RideInterface {
 
     @Override
     public void addVisitorToHistory(Visitor visitor) {
-        // Implementation in Part 4A
+        if (visitor != null) {
+            rideHistory.add(visitor);
+            System.out.println("Visitor " + visitor.getName() + " added to ride history.");
+        } else {
+            System.out.println("Cannot add null visitor to ride history.");
+        }
     }
 
     @Override
     public boolean checkVisitorFromHistory(Visitor visitor) {
-        // Implementation in Part 4A
-        return false;
+        boolean found = rideHistory.contains(visitor);
+        System.out.println("Visitor " + visitor.getName() + 
+            (found ? " is in" : " is NOT in") + " the ride history.");
+        return found;
     }
 
     @Override
