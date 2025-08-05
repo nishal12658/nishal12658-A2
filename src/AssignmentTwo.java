@@ -21,6 +21,12 @@ public class AssignmentTwo {
         ride.addVisitorToQueue(v4);
         ride.addVisitorToQueue(v5);
 
+        // Remove one Visitor
+        ride.removeVisitorFromQueue();
+
+        // Print the queue
+        ride.printQueue();
+
     }
 
     public void partFourA() {
