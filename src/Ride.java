@@ -3,6 +3,7 @@ import java.util.*;
 public class Ride implements RideInterface {
     private String rideName;
     private int minHeightRequirement;
+    private int maxRider; 
     private Employee rideOperator;
 
     // Declared now for upcoming parts
@@ -14,9 +15,10 @@ public class Ride implements RideInterface {
         this.rideHistory = new LinkedList<>();
     }
 
-    public Ride(String rideName, int minHeightRequirement, Employee rideOperator) {
+    public Ride(String rideName, int minHeightRequirement, int maxRider,  Employee rideOperator) {
         this.rideName = rideName;
         this.minHeightRequirement = minHeightRequirement;
+        this.maxRider = maxRider;
         this.rideOperator = rideOperator;
         this.queue = new LinkedList<>();
         this.rideHistory = new LinkedList<>();
