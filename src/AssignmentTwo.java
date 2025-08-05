@@ -14,6 +14,13 @@ public class AssignmentTwo {
         Visitor v4 = new Visitor("Isla", 18, "Perth City", "A004", "Family Time");
         Visitor v5 = new Visitor("Jack", 20, "Adelaide Hills", "A005", "Challenge");
 
+        // Add Visitors to the Queue
+        ride.addVisitorToQueue(v1);
+        ride.addVisitorToQueue(v2);
+        ride.addVisitorToQueue(v3);
+        ride.addVisitorToQueue(v4);
+        ride.addVisitorToQueue(v5);
+
     }
 
     public void partFourA() {
