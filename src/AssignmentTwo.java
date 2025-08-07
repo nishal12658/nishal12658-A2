@@ -31,8 +31,34 @@ public class AssignmentTwo {
     }
 
     public void partFourA() {
-  
+        Employee operator = new Employee("Mason", 27, "Gold Coast", "E102", "Ride Attendant");
+        Ride ride = new Ride("Batwing Spaceshot", 100, 130, operator);
+
+        // Create 5 Visitors
+        Visitor v1 = new Visitor("Ava", 20, "Darwin Waterfront", "A010", "Excitement");
+        Visitor v2 = new Visitor("Lucas", 22, "Canberra City", "A011", "Fun");
+        Visitor v3 = new Visitor("Mia", 19, "Hobart Bay", "A012", "Thrill");
+        Visitor v4 = new Visitor("Ethan", 24, "Geelong", "A013", "Challenge");
+        Visitor v5 = new Visitor("Zoe", 18, "Newcastle", "A014", "Adventure");
+
+        // Add them to ride history
+        ride.addVisitorToHistory(v1);
+        ride.addVisitorToHistory(v2);
+        ride.addVisitorToHistory(v3);
+        ride.addVisitorToHistory(v4);
+        ride.addVisitorToHistory(v5);
+
+        // Check if a visitor is in history
+        ride.checkVisitorFromHistory(v3); // Should be found
+
+        // Get total number of visitors
+        ride.numberOfVisitors();
+
+        // Print ride history
+        ride.printRideHistory();
     }
+
+
 
     public void partFourB() {
   
