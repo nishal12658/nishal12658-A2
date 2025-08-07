@@ -3,7 +3,8 @@ import java.util.*;
 public class Ride implements RideInterface {
     private String rideName;
     private int minHeightRequirement;
-    private int maxRider; 
+    private int maxRider;      // Max visitors per cycle
+    private int numOfCycles;   // Number of times the ride has been run
     private Employee rideOperator;
 
     // Declared now for upcoming parts
@@ -22,6 +23,7 @@ public class Ride implements RideInterface {
         this.rideOperator = rideOperator;
         this.queue = new LinkedList<>();
         this.rideHistory = new LinkedList<>();
+        this.numOfCycles = 0;
     }
 
     // Getters and Setters
@@ -125,4 +127,10 @@ public class Ride implements RideInterface {
         Collections.sort(rideHistory, new VisitorComparator());
         System.out.println("Ride history has been sorted by name and ticket number.");
     }
+
+    public int getNumOfCycles() { return numOfCycles; }
+    public void setNumOfCycles(int numOfCycles) { this.numOfCycles = numOfCycles; }
+
+    public int getMaxRider() { return maxRider; }
+    public void setMaxRider(int maxRider) { this.maxRider = maxRider; }
 }
