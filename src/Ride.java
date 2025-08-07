@@ -115,4 +115,14 @@ public class Ride implements RideInterface {
             System.out.println("- " + v.getName() + " (Ticket: " + v.getTicketNumber() + ")");
         }
     }
+
+    public void sortRideHistory() {
+        if (rideHistory.isEmpty()) {
+            System.out.println("Cannot sort. Ride history is empty.");
+            return;
+        }
+
+        Collections.sort(rideHistory, new VisitorComparator());
+        System.out.println("Ride history has been sorted by name and ticket number.");
+    }
 }
