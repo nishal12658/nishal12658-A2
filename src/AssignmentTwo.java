@@ -3,7 +3,7 @@ public class AssignmentTwo {
         AssignmentTwo a2 = new AssignmentTwo();
         a2.partThree(); // Test Part 3 here
         a2.partFourA(); // Test Part 4A here
-        
+
     }
 
     public void partThree() {
@@ -63,8 +63,32 @@ public class AssignmentTwo {
 
 
     public void partFourB() {
-  
+        Employee operator = new Employee("Ruby", 31, "Fremantle", "E103", "Ride Manager");
+        Ride ride = new Ride("Green Lantern Coaster", 130, 170, operator);
+
+        Visitor v1 = new Visitor("Harper", 21, "Wollongong", "A120", "Fun");
+        Visitor v2 = new Visitor("Archie", 23, "Townsville", "A115", "Excitement");
+        Visitor v3 = new Visitor("Matilda", 18, "Ballarat", "A140", "Adventure");
+        Visitor v4 = new Visitor("Hudson", 25, "Cairns", "A110", "Challenge");
+        Visitor v5 = new Visitor("Sienna", 22, "Launceston", "A135", "Thrill");
+
+
+        ride.addVisitorToHistory(v1);
+        ride.addVisitorToHistory(v2);
+        ride.addVisitorToHistory(v3);
+        ride.addVisitorToHistory(v4);
+        ride.addVisitorToHistory(v5);
+
+
+        ride.printRideHistory();
+
+
+        ride.sortRideHistory();
+
+        
+        ride.printRideHistory();
     }
+
 
     public void partFive() {
     }
