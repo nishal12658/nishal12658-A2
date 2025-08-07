@@ -2,6 +2,8 @@ public class AssignmentTwo {
     public static void main(String[] args) {
         AssignmentTwo a2 = new AssignmentTwo();
         a2.partThree(); // Test Part 3 here
+        a2.partFourA(); // Test Part 4A here
+        
     }
 
     public void partThree() {
