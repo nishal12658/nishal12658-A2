@@ -92,7 +92,26 @@ public class AssignmentTwo {
 
 
     public void partFive() {
+        Employee operator = new Employee("Cooper", 34, "Sunshine Coast", "E104", "Ride Captain");
+        Ride ride = new Ride("Doomsday Destroyer", 145, 4, operator ); // maxRider = 4
+
+        // Create 10 Visitors and add them to the queue
+        String[] names = {"Ella", "Hunter", "Willow", "Levi", "Emily", "Henry", "Sophie", "Charlie", "Grace", "Max"};
+        String[] addresses = {"Byron Bay", "Albury", "Rockhampton", "Bendigo", "Toowoomba", "Mackay", "Shepparton", "Wagga Wagga", "Mildura", "Coffs Harbour"};
+        for (int i = 0; i < 10; i++) {
+            Visitor visitor = new Visitor(names[i], 18 + i, addresses[i], "A2" + String.format("%02d", i + 1), "Enjoyment");
+            ride.addVisitorToQueue(visitor);
+        }
+
+        ride.printQueue();
+
+        ride.runOneCycle();
+
+        ride.printQueue();
+
+        ride.printRideHistory();
     }
+
 
     public void partSix() {
     }
