@@ -3,6 +3,7 @@ public class AssignmentTwo {
         AssignmentTwo a2 = new AssignmentTwo();
         a2.partThree(); // Test Part 3 here
         a2.partFourA(); // Test Part 4A here
+        a2.partFourB(); // Test Part 4B here
 
     }
 
