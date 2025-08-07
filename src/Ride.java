@@ -75,7 +75,26 @@ public class Ride implements RideInterface {
 
     @Override
     public void runOneCycle() {
-        // Implementation in Part 5
+        if (rideOperator == null) {
+            System.out.println("Ride cannot run. No ride operator assigned.");
+            return;
+        }
+
+        if (queue.isEmpty()) {
+            System.out.println("Ride cannot run. Queue is empty.");
+            return;
+        }
+
+        int count = 0;
+        while (!queue.isEmpty() && count < maxRider) {
+            Visitor visitor = queue.poll();
+            addVisitorToHistory(visitor);
+            System.out.println("Visitor " + visitor.getName() + " took the ride.");
+            count++;
+        }
+
+        numOfCycles++;
+        System.out.println("Ride has been run. Total cycles completed: " + numOfCycles);
     }
 
     @Override
