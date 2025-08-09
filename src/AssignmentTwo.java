@@ -115,6 +115,16 @@ public class AssignmentTwo {
 
 
     public void partSix() {
+        Employee operator = new Employee("Jasper", 39, "Parramatta", "E105", "Safety Lead");
+        Ride ride = new Ride("Justice League Ride", 120, 3, operator);
+
+        // Add 5 visitors to ride history
+        ride.addVisitorToHistory(new Visitor("Olive", 23, "Glenelg", "A201", "Hero Fans"));
+        ride.addVisitorToHistory(new Visitor("Angus", 21, "Mandurah", "A202", "Curiosity"));
+        ride.addVisitorToHistory(new Visitor("Poppy", 19, "Bunbury", "A203", "Fun"));
+        ride.addVisitorToHistory(new Visitor("Harvey", 36, "Alice Springs", "A204", "Family"));
+        ride.addVisitorToHistory(new Visitor("Evie", 41, "Broome", "A205", "Chill"));
+
     }
 
     public void partSeven() {
