@@ -5,6 +5,7 @@ public class AssignmentTwo {
         a2.partFourA(); // Test Part 4A here
         a2.partFourB(); // Test Part 4B here
         a2.partFive(); // Test Part 5 here
+        a2.partSix(); // Test Part 6 here
 
     }
 
