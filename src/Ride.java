@@ -1,3 +1,8 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class Ride implements RideInterface {
@@ -152,4 +157,24 @@ public class Ride implements RideInterface {
 
     public int getMaxRider() { return maxRider; }
     public void setMaxRider(int maxRider) { this.maxRider = maxRider; }
+
+    public void exportRideHistory() {
+        String fileName = "ride_history.csv";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            for (Visitor v : rideHistory) {
+                String line = v.getName() + "," +
+                            v.getAge() + "," +
+                            v.getAddress() + "," +
+                            v.getTicketNumber() + "," +
+                            v.getVisitPurpose();
+                writer.write(line);
+                writer.newLine();
+            }
+            System.out.println("Ride history successfully exported to " + fileName);
+        } catch (IOException e) {
+            System.out.println("Error writing to file: " + e.getMessage());
+        }
+    }
+    
 }
