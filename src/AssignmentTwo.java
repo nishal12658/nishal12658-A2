@@ -125,6 +125,8 @@ public class AssignmentTwo {
         ride.addVisitorToHistory(new Visitor("Harvey", 36, "Alice Springs", "A204", "Family"));
         ride.addVisitorToHistory(new Visitor("Evie", 41, "Broome", "A205", "Chill"));
 
+        // Export to file
+        ride.exportRideHistory();
     }
 
     public void partSeven() {
